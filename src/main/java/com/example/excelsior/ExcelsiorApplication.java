@@ -46,6 +46,11 @@ class PersonRestController {
 				this.personRepository = personRepository;
 		}
 
+		@GetMapping ("/")
+		String hello (){
+				return "Hello";
+		}
+
 		@GetMapping("/people")
 		Collection<Person> people() {
 				return this.personRepository.findAll();
@@ -54,8 +59,6 @@ class PersonRestController {
 
 interface PersonRepository extends JpaRepository<Person, Long> {
 }
-
-
 
 @Entity
 @AllArgsConstructor
