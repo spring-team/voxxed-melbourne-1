@@ -14,11 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.io.File;
 import java.util.Arrays;
 import java.util.Collection;
 
 @SpringBootApplication
 public class ExcelsiorApplication {
+
+		private final File file = new File(".");
 
 		@Bean
 		ApplicationRunner runner(PersonRepository personRepository) {
@@ -46,8 +49,8 @@ class PersonRestController {
 				this.personRepository = personRepository;
 		}
 
-		@GetMapping ("/")
-		String hello (){
+		@GetMapping("/")
+		String hello() {
 				return "Hello";
 		}
 
