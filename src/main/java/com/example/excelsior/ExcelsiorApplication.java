@@ -19,6 +19,8 @@ import javax.persistence.Id;
 import java.util.Arrays;
 import java.util.Collection;
 
+import java.io.File;
+
 @SpringBootApplication
 public class ExcelsiorApplication {
 
